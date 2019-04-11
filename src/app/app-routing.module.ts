@@ -11,10 +11,11 @@ const appRoutes: Routes = [
     { path: 'about', component: AboutComponent },
     { path: 'item', component: ItemComponent },
     // { path: '**', component: PageNotFoundComponent },
-    { path: '**', pathMatch: 'full', redirectTo: '' }
+    { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
-
+//Se utiliza useHash para poner un # antes de la ruta en el navegador
+//cuando no se tiene acceso al .htaccess para que lo cargue el index
 @NgModule({
     imports:[
         RouterModule.forRoot(appRoutes, {useHash: true})
