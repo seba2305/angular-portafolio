@@ -12,7 +12,7 @@ export class ProductosService {
   productos: Producto[] = [];
   productosFiltrado: Producto[] = [];
 
-  constructor( private http: HttpClient ) { 
+  constructor( private http: HttpClient ) {
 
     this.cargarProductos();
 

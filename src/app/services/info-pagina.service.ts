@@ -22,8 +22,8 @@ export class InfoPaginaService {
 
   }
 
-  private cargarInfo(){
-    //Leer archivo json
+  private cargarInfo() {
+    // Leer archivo json
     this.http.get('assets/data/data-page.json')
       .subscribe( (resp: InfoPagina) => {
           this.cargada = true;
@@ -31,8 +31,8 @@ export class InfoPaginaService {
       });
   }
 
-  private cargarEquipo(){
-    //Leer archivo json
+  private cargarEquipo() {
+    // Leer archivo json
     this.http.get('https://portafolio-angular-d929a.firebaseio.com/equipo.json')
       // .subscribe( (resp: any[]) => {
       .subscribe( (resp: InfoEquipo[]) => {
@@ -42,4 +42,3 @@ export class InfoPaginaService {
       });
   }
 }
-// 
